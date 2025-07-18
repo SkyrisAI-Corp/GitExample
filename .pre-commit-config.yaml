@@ -1,0 +1,13 @@
+repos:
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v3.1.0  # 使用最新稳定版本
+    hooks:
+      - id: prettier
+        files: \.md$  # 仅匹配 .md 后缀的文件
+        args: [--parser, markdown]  # 强制使用 markdown 解析器
+
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.39.0  # 最新版本可查看项目 Releases
+    hooks:
+      - id: markdownlint
+        files: \.md$  # 仅检查 Markdown 文件
